@@ -12,6 +12,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
 class MovieInfo(models.Model):
     m_id = models.AutoField(primary_key=True)
     m_name = models.CharField(max_length=100)
@@ -28,6 +29,8 @@ class MovieInfo(models.Model):
         return str(self.m_id)
 
 
+
+
 class Sentimentclassify(models.Model):
     m = models.ForeignKey(MovieInfo, models.DO_NOTHING)
     index = models.AutoField(primary_key=True)
@@ -41,8 +44,6 @@ class Sentimentclassify(models.Model):
 
     def __str__(self):
         return str(self.index)
-
-
 
 
 class ShortComments(models.Model):
@@ -74,4 +75,6 @@ class User(models.Model):
 
     def __str__(self):
         return str(self.u_id)
+
+
 
