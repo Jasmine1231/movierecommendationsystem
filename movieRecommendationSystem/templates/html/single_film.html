@@ -1,17 +1,18 @@
+{% load static %}
 <!DOCTYPE HTML>
 <html>
     <head>
        <meta charset="utf-8">
        <title>单个电影</title>
-        <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="../../static/css/component.css">
-        <link rel="stylesheet" href="../../static/css/single_film2.css">
-        <link rel="stylesheet" type="text/css" href="../../static/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="../../static/css/single_film.css">
-  	    <script src="../../static/js/jquery.min.js"></script>
-		<script src="../../static/js/bootstrap.min.js"></script>
-        <script src="../../static/js/bootstrap.min.js"></script>
-        <script src="../../static/js/echarts.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/component.css" %}">
+        <link rel="stylesheet" href="{% static "css/single_film2.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/font-awesome.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "css/single_film.css" %}">
+  	    <script src="{% static "js/jquery.min.js" %}"></script>
+		<script src="{% static "js/bootstrap.min.js" %}"></script>
+        <script src="{% static "js/bootstrap.min.js" %}"></script>
+        <script src="{% static "js/echarts.js" %}"></script>
     </head>
 
 <body>
@@ -311,9 +312,11 @@ $(document).ready(function () {
             center:['68%', '48%'],
             roseType : 'area',
             data:[
-                {value:40, name:'good'},
-                {value:5, name:'middle'},
-                {value:15, name:'bad'}
+                {% if sentiment %}
+                {value:{{ sentiment.good_count }}, name:'good'},
+                {value:{{ sentiment.middle_count }}, name:'middle'},
+                {value:{{ sentiment.bad_count }}, name:'bad'}
+                {% endif %}
             ]
         }
     ]

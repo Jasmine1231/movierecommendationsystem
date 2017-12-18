@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^movie/',include('comment.urls',namespace='movie',app_name='comment')),
+    url(r'^comment/',include('comment.urls',namespace='comment')),
 ]

@@ -10,6 +10,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 
 
@@ -28,6 +29,12 @@ class MovieInfo(models.Model):
     def __str__(self):
         return str(self.m_id)
 
+    def get_absolute_url(self):
+        return reverse('comment:movie_info',args=[self.m_id])
+
+
+
+
 
 
 
@@ -43,7 +50,10 @@ class Sentimentclassify(models.Model):
         db_table = 'sentimentClassify'
 
     def __str__(self):
-        return str(self.index)
+        return str(self.m)
+
+    def get_absolute_url(self):
+        return reverse('comment:sentiment_classify',args=[self.m])
 
 
 class ShortComments(models.Model):
