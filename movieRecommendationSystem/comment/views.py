@@ -18,3 +18,8 @@ def sentiment_classify(request,m_id):
     sentiment=get_object_or_404(Sentimentclassify,m=m_id)
     comments = ShortComments.objects.filter(m=m_id).first()
     return render(request,'../templates/html/single_film.html',{'sentiment':sentiment,'movie':movie,'comments':comments})
+
+
+def show_index(request):
+    movie=MovieInfo.objects.filter(m_id=16000)
+    return render(request,'../templates/index.html',{'movie':movie})
