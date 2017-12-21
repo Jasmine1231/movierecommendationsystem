@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 def movie_list(request):
     movies = MovieInfo.objects.all()
-    limit=100
+    limit=200
     paginatior=Paginator(movies,limit)
     page=request.GET.get('page',1)
     loaded=paginatior.page(page)

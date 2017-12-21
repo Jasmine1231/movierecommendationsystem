@@ -8,7 +8,13 @@
         <a href="?page={{ movies.previous_page_number }}" > < Pre</a>
     {% endif %}
 <span>
-    Page{{ movies.number }} of {{ movies.paginator.num_pages }}.
+    {% for pg in movies.paginator.page_range %}
+        {% if movies.number == pg %}
+            <li class="'active"><a href="?page={{ pg }}">{{ pg }}</a> </li>
+            {% else %}
+            <li><a href="?page={{ pg }}">{{ pg }}</a></li>
+        {% endif %}
+    {% endfor %}
 
 </span>
 {% if movies.has_next %}
