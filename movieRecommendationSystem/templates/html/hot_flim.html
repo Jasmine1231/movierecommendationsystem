@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE HTML>
 <html>
     <head>
        <meta charset="utf-8">
        <title>优秀电影</title>
-       <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-       <link rel="stylesheet" href="../css/hot_film.css">
-       <link rel="stylesheet" href="../css/component.css">
-			 <script src="../js/jquery.min.js"></script>
+       <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+       <link rel="stylesheet" href="{% static 'css/hot_film.css' %}">
+       <link rel="stylesheet" href="{% static 'css/component.css' %}">
+			 <script src="{% static 'js/jquery.min.js' %}"></script>
     </head>
 
 <body>
@@ -120,10 +121,9 @@
                </div>
               </div>
                <div class="movie-card">
-               <div class="single_movie">
+                 <div class="single_movie">
                    <div class="movie_post">
-                       <a href="single_film.html"><img 
-                       src="../img/movie04.jpg"></a>
+                       <a href="single_film.html"><img src="../img/movie04.jpg"></a>
                    </div>
                    <div class="movie_info">
                        <div class="movie_name">业火的向日葵</div>
@@ -134,10 +134,9 @@
                </div>
               </div>
                <div class="movie-card">
-               <div class="single_movie">
+                 <div class="single_movie">
                    <div class="movie_post">
-                       <a href="single_film.html"><img 
-                       src="../img/movie04.jpg"></a>
+                       <a href="single_film.html"><img src="../img/movie04.jpg"></a>
                    </div>
                    <div class="movie_info">
                        <div class="movie_name">业火的向日葵</div>
@@ -145,22 +144,10 @@
                            <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
                        </div>
                    </div>
+                 </div>
                </div>
-              </div>
-              <div class="row_last_movie">
-                   <div class="movie_post">
-                       <a href="single_film.html"><img 
-                       src="../img/movie04.jpg"></a>
-                   </div>
-                   <div class="movie_info">
-                       <div class="movie_name">业火的向日葵</div>
-                       <div class="movie_introduction">
-                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
-                       </div>
-                   </div>
-              </div>
            </div>
-                 <div class="row_movie">
+           <div class="row_movie">
               <div class="movie-card">
                <div class="single_movie">
                    <div class="movie_post">
@@ -217,20 +204,6 @@
                    </div>
                </div>
               </div>
-               <div class="movie-card">
-               <div class="single_movie">
-                   <div class="movie_post">
-                       <a href="single_film.html"><img 
-                       src="../img/movie04.jpg"></a>
-                   </div>
-                   <div class="movie_info">
-                       <div class="movie_name">业火的向日葵</div>
-                       <div class="movie_introduction">
-                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
-                       </div>
-                   </div>
-               </div>
-              </div>
               <div class="row_last_movie">
                    <div class="movie_post">
                        <a href="single_film.html"><img 
@@ -244,8 +217,239 @@
                    </div>
               </div>
            </div>
+            <div class="row_movie">
+              <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+              <div class="row_last_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+              </div>
+           </div>
+            <div class="row_movie">
+              <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+              <div class="row_last_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+              </div>
+           </div>
+            <div class="row_movie">
+              <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+               <div class="movie-card">
+               <div class="single_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+               </div>
+              </div>
+              <div class="row_last_movie">
+                   <div class="movie_post">
+                       <a href="single_film.html"><img
+                       src="../img/movie04.jpg"></a>
+                   </div>
+                   <div class="movie_info">
+                       <div class="movie_name">业火的向日葵</div>
+                       <div class="movie_introduction">
+                           <a href="../html/single_film.html" class="note">大富豪云集的拍卖会场人声鼎沸。铃木财团的顾问铃木次郎吉拍下了据说早已在日本被烧毁的梵高名作《向日葵》。电视正对这个重大新闻进行全球直播，柯南和小兰他们也在目不转睛地收看着。为保护画作，铃木财团召集了以毛利小五郎为首的专业团队“七武士”。就在这时，怪盗基德突然出现！他大张旗鼓地扰乱了会场，随后消失在纽约上空。</a>
+                       </div>
+                   </div>
+              </div>
+           </div>
            
         </div>
+        <nav aria-label="Page navigation" class="col-md-8 col-sm-offset-2 text-center">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
         
      <script>
             /*获得btn*/
@@ -294,6 +498,8 @@
         
     </div>
     <!--悬浮主导航栏-->
+
+
 <script type="text/javascript">
 $(document).ready(function () {
     var topH=$("#top").height();//获取头部高度，top指导航栏上面的部分

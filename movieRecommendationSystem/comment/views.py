@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 # Create your views here.
 def movie_list(request):
     movies = MovieInfo.objects.all()
-    limit=200
+    limit=100
     paginatior=Paginator(movies,limit)
     page=request.GET.get('page',1)
     loaded=paginatior.page(page)
@@ -29,3 +29,6 @@ def sentiment_classify(request,m_id):
 def show_index(request):
     movien=MovieInfo.objects
     return render(request,'../templates/index.html', {'m': movien})
+
+def hot_film(request):
+    return render(request,'../templates/html/hot_flim.html')

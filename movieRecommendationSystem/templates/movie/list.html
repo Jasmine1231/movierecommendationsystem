@@ -1,8 +1,23 @@
+{% load static %}
+{% load bootstrap_pagination %}
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <meta charset="utf-8">
+       <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    </head>
+    <body>
+    <div>
 {% for m in movies %}
 <div>
-    <li><a href="/comment/{{ m.m_id }}/">{{ m.m_name }}</a></li>
+    <li> <a href="/comment/{{ m.m_id }}/">{{ m.m_name }}</a></li>
 </div>
 {% endfor %}
+
+</div>
+<div class="col-md-8 col-sm-offset-2 text-center">{% bootstrap_paginate movies range=10 show_prev_next="false" show_first_last="true" %}</div>
+    <!--
 <div>
     {% if movies.has_previous %}
         <a href="?page={{ movies.previous_page_number }}" > < Pre</a>
@@ -21,3 +36,37 @@
         <a href="?page={{ movies.next_page_number }}" > Next ></a>
     {% endif %}
 </div>
+
+
+
+
+
+  <nav aria-label="Page navigation" class="col-md-8 col-sm-offset-2 text-center">
+ <ul class="pagination">
+  {% if movies.cur_page != 1 %}
+  <li><a href="?cur_page=1" rel="external nofollow" ><<</a></li>
+  <li>
+   <a href="?cur_page={{ movies.pre_page }}" rel="external nofollow" aria-label="Previous">
+    <span aria-hidden="true">«</span>
+   </a>
+  </li>
+  {% endif %}
+  {% for page_item in movies.page_items %}
+  {% if page_item == movies.cur_page %}
+    <li><a href="?cur_page={{ page_item }}" rel="external nofollow" rel="external nofollow" >{{ page_item }}</a></li>
+  {% else %}
+    <li><a href="?cur_page={{ page_item }}" rel="external nofollow" rel="external nofollow" >{{ page_item }}</a></li>
+  {% endif %}
+  {% endfor%}
+  {% if movies.cur_page != movies.all_page %}
+  <li>
+   <a href="?cur_page={{ movies.next_page }}" rel="external nofollow" aria-label="Next">
+    <span aria-hidden="true">»</span>
+   </a>
+  </li>
+  <li><a href="?cur_page={{ movies.all_page }}" rel="external nofollow" >>></a></li>
+  {% endif %}
+ </ul>
+  </nav></body>
+
+    -->
