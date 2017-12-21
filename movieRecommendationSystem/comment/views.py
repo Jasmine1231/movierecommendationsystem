@@ -2,10 +2,16 @@ from django.shortcuts import render,get_object_or_404
 from .models import MovieInfo,Sentimentclassify,ShortComments
 from django.http import HttpResponse
 from django.template import loader
+from django.core.paginator import Paginator
+
 # Create your views here.
 def movie_list(request):
     movies = MovieInfo.objects.all()
-    return render(request, "../templates/movie/list.html", {'movies': movies})
+    limit=100
+    paginatior=Paginator(movies,limit)
+    page=request.GET.get('page',1)
+    loaded=paginatior.page(page)
+    return render(request, "../templates/movie/list.html", {'movies': loaded})
 
 
 def movie_info(request,m_id):
@@ -21,5 +27,5 @@ def sentiment_classify(request,m_id):
 
 
 def show_index(request):
-    movie=MovieInfo.objects.filter(m_id=16000)
-    return render(request,'../templates/index.html',{'movie':movie})
+    movien=MovieInfo.objects
+    return render(request,'../templates/index.html', {'m': movien})

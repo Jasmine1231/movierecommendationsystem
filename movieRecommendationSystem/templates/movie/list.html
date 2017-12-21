@@ -1,9 +1,17 @@
-{% if movies %}
-    <ul>
-    {% for m in movies %}
-        <li><a href="/comment/{{ m.m_id }}/">{{ m.m_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% for m in movies %}
+<div>
+    <li><a href="/comment/{{ m.m_id }}/">{{ m.m_name }}</a></li>
+</div>
+{% endfor %}
+<div>
+    {% if movies.has_previous %}
+        <a href="?page={{ movies.previous_page_number }}" > < Pre</a>
+    {% endif %}
+<span>
+    Page{{ movies.number }} of {{ movies.paginator.num_pages }}.
+
+</span>
+{% if movies.has_next %}
+        <a href="?page={{ movies.next_page_number }}" > Next ></a>
+    {% endif %}
+</div>
