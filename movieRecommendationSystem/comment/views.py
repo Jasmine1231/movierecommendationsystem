@@ -27,7 +27,7 @@ def sentiment_classify(request,m_id):
 
 
 def show_index(request):
-    movien=MovieInfo.objects
+    movien=MovieInfo.objects.all()
     return render(request,'../templates/index.html', {'m': movien})
 
 def hot_film(request):
